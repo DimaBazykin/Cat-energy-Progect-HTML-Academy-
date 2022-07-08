@@ -1,0 +1,231 @@
+.page-header{
+  background: none;
+}
+
+.page-header-index{
+  @media (min-width:1440px) {
+    display: block;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+  }
+}
+
+.main-header__wrapper{
+  @media (min-width:768px) {
+    .wrapper();
+  }
+  @media (min-width:768px) and (max-width:1440px) {
+   display: flex;
+   align-items: flex-end;
+   justify-content: space-between;
+   padding-top: 25px;
+  }
+  @media (min-width:1440px) {
+   display: flex;
+   align-items: flex-end;
+   justify-content: space-between;
+   padding-top: 54px;
+  }
+}
+
+.page-header__logo{
+  background-image: url("../img/footer-logo 2 (1).svg"),
+  url(../img/logo-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: center, 20px ;
+  display: block;
+  width: 100%;
+  height: 64px;
+  border-bottom: 1px solid #E6E6E6;
+  @media (min-width:768px) and (max-width:1440px) {
+    background-image: url("../img/logo-tablet.svg");
+    width: 174px;
+    height: 52px;
+    display: block;
+    border-bottom: none;
+  }
+  @media (min-width:1440px) {
+    background-image: url("../img/logo-desktop.svg");
+    background-size: contain;
+    width: 202px;
+    height: 60px;
+    display: block;
+    border-bottom: none;
+  }
+  &:hover{
+    opacity: 0.8;
+  }
+  &:focus{
+    opacity: 0.6;
+  }
+}
+
+.main-nav__toggle{
+  padding: 0;
+  top: 22px;
+  right: 22px;
+  background:none;
+  border:none;
+  cursor: pointer;
+  width: 24px;
+  height: 18px;
+  position: absolute;
+  @media (min-width:768px) {
+    display: none;
+    }
+}
+
+.main-nav--opened .main-nav__toggle{
+  &::before,
+  &::after {
+  content: "";
+  position: absolute;
+  right: -3px;
+  width: 24px;
+  height: 1.5px;
+  background-color: @basik-black;
+  }
+  &::before {
+  transform: rotate(45deg);
+  box-shadow: none;
+  }
+  &::after {
+  transform: rotate(-45deg);
+  box-shadow: none;
+  }
+  &:active::before,
+  &:active::after {
+    background-color: fade( @basik-black, 30%);
+  }
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top:0;
+  right:0;
+  width: 24px;
+  height: 1.5px;
+  background-color:  @basik-black;
+  box-shadow: 0 8px 0 0  @basik-black, 0 16px 0 0  @basik-black;
+}
+
+.main-nav--closed .main-nav__toggle:active::before {
+  background-color: fade( @basik-black, 30%);
+  box-shadow:
+    0 8px 0 0 fade( @basik-black, 30%),
+    0 16px 0 0 fade( @basik-black, 30%);
+}
+
+.main-nav--closed .header-nav__list{
+  @media (max-width:767px) {
+    display: none;
+  }
+}
+
+.header-nav__list{
+padding: 0;
+margin: 0;
+display: block;
+list-style: none;
+@media (min-width:768px) and (max-width:1440px) {
+  display: flex;
+  justify-content: space-between;
+  width: 440px;
+  flex-wrap: wrap
+}
+@media (min-width:1440px) {
+  display: flex;
+  justify-content: space-between;
+  width: 478px;
+  flex-wrap: wrap
+}
+}
+
+.header-nav__item{
+  font-family: 'Oswald';
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  border-bottom: 1px solid #E6E6E6;
+  height: 64px;
+  display: flex;
+  align-content: center;
+  @media (min-width:768px) and (max-width:1440px) {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: start;
+    border-bottom: none;
+    height: auto;
+    padding-bottom: 10px;
+  }
+  @media (min-width:1440px) {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: start;
+    border-bottom: none;
+    height: auto;
+    padding-bottom: 8px;
+  }
+  a{
+    text-decoration: none;
+    color:@basik-black;
+    min-width: 100%;
+    min-height: 100%;
+    padding-top: 22px;
+    @media (min-width:768px) {
+      padding-top: 0;
+    }
+  }
+  &:hover{
+    opacity: 0.6;
+  }
+  &:focus{
+    opacity: 0.3;
+  }
+}
+
+.header-main-nav__item{
+  a{
+    @media (min-width:1440px) {
+      color:@basik-white;
+    }
+    }
+}
+
+.header-nav-item-active{
+  @media (min-width:768px) {
+    border-bottom: 2px solid @basik-green;
+    &:hover{
+      opacity: 0.6;
+    }
+    &:focus{
+      opacity: 0.3;
+    }
+  }
+}
+
+.header-main-nav__item-active{
+  @media (min-width:768px)  and (max-width:1440px) {
+    border-bottom: 2px solid @basik-green;
+    &:hover{
+      opacity: 0.6;
+    }
+    &:focus{
+      opacity: 0.3;
+    }
+  }
+  @media (min-width:1440px) {
+  border-bottom: 2px solid @basik-white;
+  &:hover{
+    opacity: 0.6;
+  }
+  &:focus{
+    opacity: 0.3;
+  }
+}}

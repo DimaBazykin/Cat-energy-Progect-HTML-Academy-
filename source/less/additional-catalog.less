@@ -1,0 +1,213 @@
+.additional-catalog__wrapper{
+  .wrapper();
+  position: relative;
+  &::before{
+    content: "";
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    height: 2px;
+    background-color:@basik-green;
+    z-index: -1;
+   @media (min-width:768px) and (max-width:1440px) {
+    left: 0;
+    top: 91px;
+    }
+  @media (min-width:1440px) {
+    left: 0;
+    top: 91px;
+  }
+  }
+}
+
+.additional-catalog__title{
+  font-family: 'Oswald';
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  padding-bottom: 36px;
+  padding-top: 26px;
+  margin: 0;
+  background-color:@basik-white;
+  display: block;
+  width: 248px;
+  @media (min-width:768px) {
+    font-size: 36px;
+    line-height: 36px;
+    padding: 0 36px;
+    padding-bottom: 81px;
+    padding-top: 75px;
+    width: 338px;
+  }
+  @media (min-width:1440px) {
+    padding: 0 40px;
+    padding-bottom: 81px;
+    padding-top: 75px;
+    position: relative;
+    left: -40px;
+}
+}
+
+.additional-catalog__block{
+  @media (min-width:1440px) {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 86px;
+}
+}
+
+.additional-catalog__list{
+  display: block;
+  list-style: none;
+  padding: 0;
+  border-top: 1px solid #CDCDCD;
+  margin: 0;
+  @media (min-width:1440px) {
+    height: 288px;
+    min-width: 895px ;
+}
+}
+
+.additional-catalog__item{
+  border-bottom: 1px solid #CDCDCD;
+  display: flex;
+  flex-direction: column;
+  h3{
+    font-family: 'Oswald';
+    font-size: 16px;
+    line-height: 16px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: @special_dark-grey;
+    margin: 13px 0;
+    @media (min-width:768px) {
+      line-height: 20px;
+      margin: 26px 0;
+      font-size: 20px;
+    }
+    @media (min-width:1440px) {
+      width: 37%;
+    }
+  }
+  dl{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 13px 0;
+    @media (min-width:768px) and (max-width:1440px) {
+      gap: 49px;
+      }
+    @media (min-width:1440px) {
+      justify-content: space-between;
+      width: 244px;
+    }
+  }
+  @media (min-width:768px) and (max-width:1440px) {
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 36px;
+  }
+  @media (min-width:1440px) {
+    flex-direction: row;
+    align-items: center;
+    gap: 38px;
+    flex-wrap: nowrap;
+    padding: 0;
+}
+}
+
+.additional-characteristic__description, .additional-characteristic__price{
+  font-family: 'Arial';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 20px;
+color: @special_dark-grey;
+margin: 0;
+margin-bottom: 12px;
+@media (min-width:768px) {
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0;
+}
+}
+
+.additional-catalog__button{
+  display: block;
+  padding: 10px 0px;
+  width: 100%;
+  margin-bottom: 19px;
+  margin-top: 15px;
+  @media (min-width:768px) and (max-width:1440px) {
+    padding: 10px 53px;
+    margin-top: 0;
+    margin-bottom: 28px;
+  }
+  @media (min-width:1440px) {
+    width: 244px;
+    margin-bottom: 19px;
+    margin-top: 15px;
+}
+}
+
+.block-gift{
+  background-image: url("/source/img/gift-photo-mobile\ 1.png");
+  @media (min-resolution: 2dppx) {
+    background-image: url("/source/img/gift-photo-mobile\ 1@2x.png");
+  }
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  width: auto;
+  height: 289px;
+  margin-bottom: 35px;
+  margin-top: 39px;
+  @media (min-width:768px) and (max-width:1440px) {
+    background-image: url("/source/img/gift-photo-tablet\ 1.png");
+    @media (min-resolution: 2dppx) {
+      background-image: url("/source/img/gift-photo-tablet\ 1@2x.png");
+    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 124px;
+    padding-right: 78px;
+    height: 200px;
+    text-align: start;
+    margin-bottom: 76px;
+  }
+  @media (min-width:1440px) {
+    background-image: url("/source/img/gift-photo-desktop.png");
+    @media (min-resolution: 2dppx) {
+      background-image: url("/source/img/gift-photo-desktop@2x.png");
+    }
+    width: 255px;
+    height: 289px;
+    margin-bottom: 0;
+    margin-top: 0;
+    display: block;
+    padding: 0;
+    text-align: center;
+  }
+  svg{
+    margin-bottom: 48px;
+    margin-top: 58px;
+    @media (min-width:768px) {
+      margin: 0;
+      margin-bottom: 46px;
+      margin-top: 56px;
+    }
+  }
+}
+
+.block-gift__text{
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+  margin: 0;
+}

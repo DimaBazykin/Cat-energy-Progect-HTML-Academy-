@@ -1,0 +1,224 @@
+.blok-special{
+  background-color:#EAEAEA;
+  @media (min-width:768px) and (max-width:1440px) {
+    background: linear-gradient(white 0%; white 58%,#EAEAEA 58%, #EAEAEA 100%)
+  }
+  @media (min-width:1440px) {
+    background: linear-gradient(white 0%; white 30%,#F2F2F2 30%, #F2F2F2 100%);
+  }
+}
+
+.blok-special__wrapper{
+  .wrapper();
+  @media (min-width:1440px) {
+  display: flex;
+  justify-content: space-between;
+  gap: 134px;
+  }
+}
+
+.Live-example__title{
+  margin: 0;
+  font-family: 'Oswald';
+font-weight: 400;
+font-size: 36px;
+line-height: 40px;
+padding-top: 27px;
+padding-bottom: 33px;
+@media (min-width:768px) {
+  font-size: 60px;
+  line-height: 60px;
+  padding-top: 43px;
+  padding-bottom: 63px;
+}
+@media (min-width:1440px) {
+  padding-top: 69px;
+  padding-bottom: 146px;
+}
+}
+
+.Live-example__text{
+  margin: 0;
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: @special_dark-grey;
+  padding-bottom: 25px;
+@media (min-width:768px) {
+  font-size: 16px;
+  line-height: 24px;
+  padding-bottom: 54px;
+}
+@media (min-width:1440px) {
+  font-size: 16px;
+  line-height: 24px;
+  padding-bottom: 69px;
+}
+}
+
+.stats__grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  @media (min-width:768px) and (max-width:1440px) {
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: stretch;
+  }
+  @media (min-width:1440px) {
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+}
+
+.stats__list{
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.stats__number{
+  font-family: 'Oswald';
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  width: 124px;
+  height: 56px;
+  border: 1px solid @special-grey;
+  box-sizing: border-box;
+  border-radius: 3px;
+  text-align: center;
+  padding-top: 15px;
+@media (min-width:768px) {
+  font-size: 30px;
+  line-height: 37px;
+  height: 72px;
+  width: 162px;
+}
+}
+
+.stats__description{
+  display: block;
+  width: 81px;
+  height: 19px;
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  color:@special_dark-grey ;
+  margin: 0;
+  position: absolute;
+  background: #EAEAEA;
+  bottom: -12px;
+  left: 21px;
+  @media (min-width:768px) and (max-width:1440px) {
+    font-size: 14px;
+    line-height: 14px;
+    background: @basik-white;
+    width: 142px;
+    bottom: -10px;
+    left: 10px;
+  }
+  @media (min-width:1440px) {
+    font-size: 14px;
+    line-height: 14px;
+    background: #F2F2F2;
+    width: 142px;
+    bottom: -10px;
+    left: 10px;
+  }
+}
+
+.conclusion__list{
+  display: flex;
+  justify-content: space-between;
+  grid-column-start: 1;
+  grid-column-end:3;
+  gap: 3px;
+  @media (min-width:768px) and (max-width:1440px) {
+    flex-direction: column;
+    align-items: flex-end;
+    grid-column: auto;
+    gap: 9px;
+  }
+  @media (min-width:1440px) {
+    gap: 4em;
+    flex-direction: row;
+    grid-column-start: 1;
+    grid-column-end:3;
+  }
+}
+
+.conclusion__description ,.conclusion__number{
+  font-family: 'Oswald';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  margin: 0;
+  @media (min-width:768px) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.slider{
+  position: relative;
+  @media (min-width:1440px) {
+    min-width: 50%;
+  }
+  @media (min-width:768px) and (max-width:1440px) {
+    height: 612px;
+  }
+  p{
+    font-family: 'Oswald';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    margin: 0;
+    @media (min-width:768px) {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+}
+
+.slid__1{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  img{
+    @media (min-width:768px) {
+      height: 520px;
+      width: 708px;
+      display: block;
+      margin: auto;
+    }
+  }
+}
+
+.slid__2{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  img{
+    @media (min-width:768px) {
+      height: 520px;
+      width: 708px;
+    }
+  }
+}
+
+.slider__control{
+  height: 88px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
