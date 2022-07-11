@@ -1,12 +1,14 @@
 @font-face {
   font-family:"Oswald";
   font-weight: 400;
+  font-display:swap;
   src: url("../fonts/oswaldregular.woff2") format("woff2")
   ,url("../fonts/oswaldregular.woff") format("woff");
 }
 @font-face {
   font-family:"Oswald";
   font-weight: 500;
+  font-display:swap;
   src: url("../fonts/oswaldmedium.woff2") format("woff2")
   ,url("../fonts/oswaldmedium.woff") format("woff");
 }
@@ -53,9 +55,10 @@
 }
 &:focus{
   background-color: @basic_green-2;
-  color:rgba(255, 255, 255, 0.3)
+  color:rgba(255, 255, 255, 0.3);
 }
 }
+@import url("normalize.less");
 @import url("header.less");
 @import url("promo.less");
 @import url("info-carts.less");
